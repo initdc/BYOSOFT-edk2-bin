@@ -14,7 +14,6 @@ RISC_V QEMU的UEFI固件，包含常用的各种功能。
 
 #### 使用说明
 
-1.  运行命令
 RISCV_VIRT_CODE.fd 和 RISCV_VIRT_VARS.fd 从本仓库下载，并复制到Qemu的安装目录。
 然后打开Windows cmd 命令行，进入到Qemu的安装目录，最后运行下面的命令。
 
