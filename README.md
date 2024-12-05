@@ -8,8 +8,8 @@ RISC-V QEMU的UEFI固件，可以在Windows上qemu环境下运行。
 
 #### 安装教程
 
-1.  Qemu 9.1.0
-下载Windows版本  https://qemu.weilnetz.de/w64/qemu-w64-setup-20240903.exe
+Qemu 下载Windows版本并安装  
+https://qemu.weilnetz.de/w64/qemu-w64-setup-20240903.exe
 
 #### 使用说明
 
@@ -49,7 +49,7 @@ qemu-system-riscv64 -M virt,pflash0=pflash0,pflash1=pflash1,acpi=off ^
 | 网络设备 （virtio-net-pci 网卡）                  |
 | 文件系统（FAT32）                               |
 | UEFI Shell |
-| 操作系统启动（openSUSE）                          |
+| 操作系统启动（openSUSE，OS待上传）                          |
 | 固件升级 （待支持）                                |
 | SMBIOS (Type 0, 1, 3, 4, 16, 17, 19, 32等） |
 | ACPI（待支持）                                 |
