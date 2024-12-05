@@ -1,7 +1,7 @@
 # risc_v_qemu
 
 #### 介绍
-RISC-V QEMU的UEFI固件，可以在Windows上qemu环境下运行。
+RISC-V 64位 QEMU的UEFI固件，可以在Windows上qemu环境下运行。
 
 #### 软件架构
 本仓库中的UEFI二进制固件都放在根目录，方便下载和验证。
@@ -34,7 +34,7 @@ qemu-system-riscv64 -M virt,pflash0=pflash0,pflash1=pflash1,acpi=off ^
 
 #### 参与贡献
 
-使用本仓库的固件，验证你们所需的功能，如果功能缺失或者功能缺陷等，在本仓库上报issue，我们讲负责定期解决和更新
+使用本仓库的固件，验证期望的功能，如果功能缺失或者功能缺陷的话，请在本仓库报issue，我们负责定期解决和更新，计划每季度更新。
 
 #### 功能清单
 
@@ -45,6 +45,8 @@ qemu-system-riscv64 -M virt,pflash0=pflash0,pflash1=pflash1,acpi=off ^
 | 启动Logo |
 | 输入设备（USB键盘）                               |
 | 输出设备（virtio-gpu-pci 显示）                   |
+| 串口日志 |
+| 串口输入输出 （待支持） |
 | 存储设备（virtio-blk-device 硬盘、U盘）             |
 | 网络设备 （virtio-net-pci 网卡）                  |
 | 文件系统（FAT32）                               |
