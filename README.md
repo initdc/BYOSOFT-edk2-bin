@@ -1,15 +1,44 @@
 # risc_v_qemu
 
 #### 介绍
-RISC-V 64位 QEMU的UEFI固件，可以在Windows上qemu环境下运行。
+RISC-V 64位 QEMU的UEFI固件，可以在Windows/Linux上qemu环境下运行。
 
 #### 软件架构
 本仓库中的UEFI二进制固件都放在根目录，方便下载和验证。
 
 #### 安装教程
-
+Windows:
 Qemu 下载Windows版本并安装  
 https://qemu.weilnetz.de/w64/qemu-w64-setup-20240903.exe
+注意事项：
+如需启用PXE Boot
+需下载OpenVPN  https://swupdate.openvpn.org/community/releases/OpenVPN-2.6.12-I001-amd64.msi
+安装成功后进入控制面板->网络和 Internet->网络和共享中心->更改适配器设置
+将虚拟网卡OpenVPN TAP-Windows6改名为tap0
+运行时添加
+```
+-netdev tap,id=net0,ifname=tap0,script=no,downscript=no 
+-device virtio-net-pci,netdev=net0 
+```
+
+Linux:
+1.  下载Qemu 9.1.0
+```
+wget https://download.qemu.org/qemu-9.1.0.tar.xz
+tar -xvf qemu-9.1.0.tar.xz
+cd qemu-9.1.0
+```
+2.  安装编译依赖
+```
+sudo apt update
+sudo apt install build-essential libglib2.0-dev libpixman-1-dev zlib1g-dev ninja-build
+```
+3.  配置编译安装
+```
+./configure --target-list=riscv64-softmmu
+make -j$(nproc)
+sudo make install
+```
 
 #### 使用说明
 
