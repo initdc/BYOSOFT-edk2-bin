@@ -25,8 +25,7 @@ qemu-system-riscv64 -M virt,pflash0=pflash0,pflash1=pflash1,acpi=off ^
 -device qemu-xhci ^
 -device usb-kbd ^
 -device usb-mouse ^
--device virtio-mouse-pci ^
--device virtio-mouse-device ^
+-device virtio-rng-pci ^
 -blockdev node-name=pflash0,driver=file,read-only=on,filename=RISCV_VIRT_CODE.fd ^
 -blockdev node-name=pflash1,driver=file,filename=RISCV_VIRT_VARS.fd ^
 -serial stdio
