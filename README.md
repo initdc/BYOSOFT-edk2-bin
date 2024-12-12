@@ -39,7 +39,8 @@ qemu-system-riscv64 -M virt,pflash0=pflash0,pflash1=pflash1,acpi=off ^
 
 | 功能 | 
 | ------ | 
-| 图形显示界面 |
+| 图形界面 |
+| 中英文显示 |
 | 热键启动 |
 | 启动Logo |
 | 输入设备（USB键盘）                               |
