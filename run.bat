@@ -12,6 +12,5 @@ qemu-system-riscv64 -M virt,pflash0=pflash0,pflash1=pflash1,acpi=off ^
 -blockdev node-name=pflash0,driver=file,read-only=on,filename=RISCV_VIRT_CODE.fd ^
 -blockdev node-name=pflash1,driver=file,filename=RISCV_VIRT_VARS.fd ^
 -serial stdio ^
--netdev tap,id=net0,ifname=tap0,script=no,downscript=no ^
--device virtio-net-pci,netdev=net0 ^
 -device virtio-rng-pci ^
+-display sdl -device virtio-vga,xres=1280,yres=720

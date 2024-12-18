@@ -50,14 +50,14 @@ qemu-system-riscv64 -M virt,pflash0=pflash0,pflash1=pflash1,acpi=off ^
 -m 4096 ^
 -smp 2 ^
 -device virtio-gpu-pci ^
--full-screen ^
 -device qemu-xhci ^
 -device usb-kbd ^
 -device usb-mouse ^
--device virtio-rng-pci ^
 -blockdev node-name=pflash0,driver=file,read-only=on,filename=RISCV_VIRT_CODE.fd ^
 -blockdev node-name=pflash1,driver=file,filename=RISCV_VIRT_VARS.fd ^
--serial stdio
+-serial stdio ^
+-device virtio-rng-pci ^
+-display sdl -device virtio-vga,xres=1280,yres=720
 ```
 
 #### 参与贡献
